@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity">
+    tools:context=".ProvaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.google.android.gms.common.SignInButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnGoogle"></com.google.android.gms.common.SignInButton>
+            android:text="Prova works!"/>
     </LinearLayout>
-    
+
 </LinearLayout>
