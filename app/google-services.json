@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "450401210693",
+    "firebase_url": "https://hello-world-android-2.firebaseio.com",
+    "project_id": "hello-world-android-2",
+    "storage_bucket": "hello-world-android-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450401210693:android:4aeff8ce9a01b10f",
+        "android_client_info": {
+          "package_name": "com.example.mandraski.helloworldandroid2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450401210693-r8m77ocmeb0nrhl8k1heuadmra5rgh9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mandraski.helloworldandroid2",
+            "certificate_hash": "652b6a129d252818a3d4f8e2f0995a38d72ee958"
+          }
+        },
+        {
+          "client_id": "450401210693-0ic358crn04059gacmj2derrp5ep5vud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO62lbB_2o45z12usMas0lQt5Z_sQX9pk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450401210693-0ic358crn04059gacmj2derrp5ep5vud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
