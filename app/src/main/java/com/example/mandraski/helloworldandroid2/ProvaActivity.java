@@ -1,8 +1,6 @@
 package com.example.mandraski.helloworldandroid2;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -11,16 +9,14 @@ import android.widget.TextView;
 public class ProvaActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView display;
     private String displayString = "";
-    private String auxN1 = "";
-    private double n1, n2;
+    private double n1;
     private String operacao = "";
-    private double resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prova);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         findViewById(R.id.rbDec).setOnClickListener(this);
@@ -46,7 +42,7 @@ public class ProvaActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.btIgual).setOnClickListener(this);
         findViewById(R.id.btPonto).setOnClickListener(this);
         findViewById(R.id.btClear).setOnClickListener(this);
-        display = (TextView) findViewById(R.id.tvDisplay);
+        display = findViewById(R.id.tvDisplay);
     }
 
     @Override
@@ -111,7 +107,7 @@ public class ProvaActivity extends AppCompatActivity implements View.OnClickList
             if (displayString.contains(".")) {
                 return;
             }
-            if (displayString == "") {
+            if (displayString.equals("")) {
                 displayString = "0.";
             } else {
                 displayString += ".";
@@ -120,25 +116,77 @@ public class ProvaActivity extends AppCompatActivity implements View.OnClickList
         }
 
         if (i == R.id.btSoma) {
-            if (displayString != "") {
-                if (auxN1 == "") {
-                    n1 = Double.parseDouble(displayString);
-                    auxN1 = displayString;
-                } else {
-                    n2 = Double.parseDouble(displayString);
-                }
+            if (!displayString.equals("")) {
+                n1 = Double.parseDouble(displayString);
                 operacao = "+";
                 displayString = "";
                 display.setText(displayString);
             }
         }
 
+        if (i == R.id.btSubtracao) {
+            if (!displayString.equals("")) {
+                n1 = Double.parseDouble(displayString);
+                operacao = "-";
+                displayString = "";
+                display.setText(displayString);
+            }
+        }
+
+        if (i == R.id.btMultiplicacao) {
+            if (!displayString.equals("")) {
+                n1 = Double.parseDouble(displayString);
+                operacao = "x";
+                displayString = "";
+                display.setText(displayString);
+            }
+        }
+
+        if (i == R.id.btDivisao) {
+            if (!displayString.equals("")) {
+                n1 = Double.parseDouble(displayString);
+                operacao = "/";
+                displayString = "";
+                display.setText(displayString);
+            }
+        }
+
+        if (i == R.id.btRaiz) {
+            if (!displayString.equals("")) {
+                n1 = Double.parseDouble(displayString);
+                displayString = String.valueOf(Math.sqrt(n1));
+                display.setText(displayString);
+            }
+        }
+
         if (i == R.id.btIgual) {
-            if (displayString != "" || operacao != "") {
+            if (!displayString.equals("") || !operacao.equals("")) {
                 switch (operacao) {
                     case "+":
+                        double n2 = Double.parseDouble(displayString);
                         operacao = "";
-                        resultado = n1 + n2;
+                        double resultado = n1 + n2;
+                        displayString = String.valueOf(resultado);
+                        display.setText(displayString);
+                        break;
+                    case "-":
+                        n2 = Double.parseDouble(displayString);
+                        operacao = "";
+                        resultado = n1 - n2;
+                        displayString = String.valueOf(resultado);
+                        display.setText(displayString);
+                        break;
+                    case "x":
+                        n2 = Double.parseDouble(displayString);
+                        operacao = "";
+                        resultado = n1 * n2;
+                        displayString = String.valueOf(resultado);
+                        display.setText(displayString);
+                        break;
+                    case "/":
+                        n2 = Double.parseDouble(displayString);
+                        operacao = "";
+                        resultado = n1 / n2;
                         displayString = String.valueOf(resultado);
                         display.setText(displayString);
                         break;
