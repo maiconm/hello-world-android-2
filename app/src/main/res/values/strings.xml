@@ -4,4 +4,6 @@
     <string name="title_activity_prova">Calculadora</string>
     <string name="title_activity_historico">Historico</string>
     <string name="title_activity_aluno">Aluno</string>
+    <string name="title_activity_pratica1">Lista - Pratica 1</string>
+    <string name="title_activity_exercicio1_p1">Exercicio1 - Pratica 1</string>
 </resources>
