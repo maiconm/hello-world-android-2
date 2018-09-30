@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.mandraski.helloworldandroid2.lista1.Pratica1Activity;
 import com.example.mandraski.helloworldandroid2.prova.ProvaActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -38,16 +39,19 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
 
         // listener do botao do xml, para verificar quando o usuario clica:
         findViewById(R.id.btProva).setOnClickListener(this);
-
+        findViewById(R.id.btLista1).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         int i = v.getId();
 
+        if (i == R.id.btLista1) {
+            startActivity(new Intent(this, Pratica1Activity.class));
+        }
+
         if (i == R.id.btProva) {
-            Intent iProva = new Intent(this, ProvaActivity.class);
-            startActivity(iProva);
+            startActivity(new Intent(this, ProvaActivity.class));
         }
     }
 
