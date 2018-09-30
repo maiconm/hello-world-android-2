@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".lista1.Pratica1Activity">
+    tools:context=".lista2.Pratica2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         <Button
             android:text="exercicio"
             android:drawableBottom="@drawable/ex1_icon"
-            android:id="@+id/btExercicio1P1"
+            android:id="@+id/btExercicio1P2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -25,7 +25,7 @@
         <Button
             android:text="exercicio"
             android:drawableBottom="@drawable/ex2_icon"
-            android:id="@+id/btExercicio2P1"
+            android:id="@+id/btExercicio2P2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -36,32 +36,9 @@
         <Button
             android:text="exercicio"
             android:drawableBottom="@drawable/ex3_icon"
-            android:id="@+id/btExercicio3P1"
+            android:id="@+id/btExercicio3P2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="exercicio"
-            android:drawableBottom="@drawable/ex4_icon"
-            android:id="@+id/btExercicio4P1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="exercicio"
-            android:drawableBottom="@drawable/ex5_icon"
-            android:id="@+id/btExercicio5P1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
 
 </LinearLayout>

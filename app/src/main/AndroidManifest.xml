@@ -60,6 +60,18 @@
         <activity
             android:name=".lista1.Exercicio5P1Activity"
             android:label="@string/title_activity_exercicio5_p1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Pratica2Activity"
+            android:label="@string/title_activity_pratica2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio1P2Activity"
+            android:label="@string/title_activity_exercicio1_p2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio1P2Tela2Activity"
+            android:label="@string/title_activity_exercicio1_p2_tela2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

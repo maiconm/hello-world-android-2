@@ -22,4 +22,7 @@
         <item>Analista</item>
     </string-array>
     <string name="title_activity_exercicio5_p1">Exercicio 5 - Pratica 1</string>
+    <string name="title_activity_pratica2">Lista - Pratica 2</string>
+    <string name="title_activity_exercicio1_p2">Exercicio 1 - Pratica 2</string>
+    <string name="title_activity_exercicio1_p2_tela2">Exercicio 1 - Pratica 2 - Tela 2</string>
 </resources>
