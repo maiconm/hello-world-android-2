@@ -1,18 +1,19 @@
 package com.example.mandraski.helloworldandroid2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListener {
     private static List<String> historicoCalc = new ArrayList<>();
+    private static String resultReturn = "";
     private RadioGroup rgConversaoNumerica;
     private RadioButton dec;
     private TextView display;
@@ -20,7 +21,6 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
     private String operacao = "";
     private String conversao = "decimal";
     private double n1;
-    private Intent histIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +61,20 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        if (!resultReturn.equals("")) {
+            String[] result = resultReturn.split("= ");
+            display.setText(result[1]);
+            Toast.makeText(this, resultReturn, Toast.LENGTH_SHORT).show();
+        }
+        resultReturn = "";
+    }
+
+    @Override
     public  void onClick(View v) {
         int i = v.getId();
+
         if (i == R.id.btNumUm) {
             rbDecToggle();
             displayString += "1";
@@ -188,6 +200,9 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                 n1 = Double.parseDouble(displayString);
                 displayString = String.valueOf(Math.sqrt(n1));
                 display.setText(displayString);
+                String resultado = n1 + " raiz = " + displayString;
+                historicoCalc.add(resultado);
+                Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -280,7 +295,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             case R.id.rbBin:
                 if (!displayString.equals("")) {
                     if (!conversao.equals("bin")) {
-                        displayString = String.valueOf(Integer.toBinaryString(Integer.valueOf(displayString)));
+                        displayString = String.valueOf(Integer.toBinaryString(stringToInt(displayString)));
                         display.setText(displayString);
                         conversao = "bin";
                         break;
@@ -292,7 +307,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             case R.id.rbOctal:
                 if (!displayString.equals("")) {
                     if (!conversao.equals("octal")) {
-                        displayString = String.valueOf(Integer.toOctalString(Integer.valueOf(displayString)));
+                        displayString = String.valueOf(Integer.toOctalString(stringToInt(displayString)));
                         display.setText(displayString);
                         conversao = "octal";
                         break;
@@ -304,7 +319,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             case R.id.rbHex:
                 if (!displayString.equals("")) {
                     if (!conversao.equals("hex")) {
-                        displayString = String.valueOf(Integer.toHexString(Integer.valueOf(displayString)));
+                        displayString = String.valueOf(Integer.toHexString(stringToInt(displayString)));
                         display.setText(displayString);
                         conversao = "hex";
                         break;
@@ -327,9 +342,19 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
     private void addHistorico(double num1, String operacao, double num2, String resultado) {
         String conta = num1 + " " + " " + operacao + " " + num2 + " = " + resultado;
         historicoCalc.add(conta);
+        Toast.makeText(this, conta, Toast.LENGTH_SHORT).show();
     }
 
-    public static List<String> getHistorico() {
-        return historicoCalc;
+    public static ArrayList<String> getHistorico() {
+        return (ArrayList<String>) historicoCalc;
+    }
+
+    private int stringToInt(String numero) {
+        double numDouble = Double.parseDouble(numero);
+        return (int) numDouble;
+    }
+
+    public static void setResultReturn(String resultado) {
+        resultReturn = resultado;
     }
 }

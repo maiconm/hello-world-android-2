@@ -33,8 +33,8 @@ public class OpcoesMenuCalc extends AppCompatActivity {
                 }
                 return true;
 
-             default:
-                 return super.onOptionsItemSelected(item);
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

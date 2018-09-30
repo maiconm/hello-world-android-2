@@ -1,20 +1,17 @@
 package com.example.mandraski.helloworldandroid2;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HistoricoActivity extends OpcoesMenuCalc {
-    private ListView historico;
+    private List<String> lista = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +20,20 @@ public class HistoricoActivity extends OpcoesMenuCalc {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        historico = findViewById(R.id.lvHistorico);
-
-        ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ProvaActivity.getHistorico());
+        ListView historico = findViewById(R.id.lvHistorico);
+        lista = ProvaActivity.getHistorico();
+        ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista);
 
         historico.setAdapter(ad);
+
+
+        historico.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ProvaActivity.setResultReturn(lista.get(position));
+                finish();
+            }
+        });
     }
 
 }
