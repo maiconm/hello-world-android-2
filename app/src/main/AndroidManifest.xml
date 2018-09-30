@@ -26,7 +26,13 @@
         <activity
             android:name=".ProvaActivity"
             android:label="@string/title_activity_prova"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".HistoricoActivity"
+            android:label="@string/title_activity_historico"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

@@ -1,14 +1,18 @@
 package com.example.mandraski.helloworldandroid2;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class ProvaActivity extends AppCompatActivity implements View.OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListener {
+    private static List<String> historicoCalc = new ArrayList<>();
     private RadioGroup rgConversaoNumerica;
     private RadioButton dec;
     private TextView display;
@@ -16,6 +20,7 @@ public class ProvaActivity extends AppCompatActivity implements View.OnClickList
     private String operacao = "";
     private String conversao = "decimal";
     private double n1;
+    private Intent histIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -216,37 +221,42 @@ public class ProvaActivity extends AppCompatActivity implements View.OnClickList
 
                     case "+":
                         double n2 = Double.parseDouble(0 + displayString);
-                        operacao = "";
                         displayString = String.valueOf(n1 + n2);
                         display.setText(displayString);
+                        addHistorico(n1, operacao, n2, displayString);
+                        operacao = "";
                         break;
 
                     case "-":
                         n2 = Double.parseDouble(0 + displayString);
-                        operacao = "";
                         displayString = String.valueOf(n1 - n2);
                         display.setText(displayString);
+                        addHistorico(n1, operacao, n2, displayString);
+                        operacao = "";
                         break;
 
                     case "x":
                         n2 = Double.parseDouble(0 + displayString);
-                        operacao = "";
                         displayString = String.valueOf(n1 * n2);
                         display.setText(displayString);
+                        addHistorico(n1, operacao, n2, displayString);
+                        operacao = "";
                         break;
 
                     case "/":
                         n2 = Double.parseDouble(0 + displayString);
-                        operacao = "";
                         displayString = String.valueOf(n1 / n2);
                         display.setText(displayString);
+                        addHistorico(n1, operacao, n2, displayString);
+                        operacao = "";
                         break;
 
                     case "exp":
                         n2 = Double.parseDouble(0 + displayString);
-                        operacao = "";
                         displayString = String.valueOf(Math.pow(n1, n2));
                         display.setText(displayString);
+                        addHistorico(n1, operacao, n2, displayString);
+                        operacao = "";
                         break;
                     default:
                 }
@@ -312,5 +322,14 @@ public class ProvaActivity extends AppCompatActivity implements View.OnClickList
             displayString = "";
             display.setText(displayString);
         }
+    }
+
+    private void addHistorico(double num1, String operacao, double num2, String resultado) {
+        String conta = num1 + " " + " " + operacao + " " + num2 + " = " + resultado;
+        historicoCalc.add(conta);
+    }
+
+    public static List<String> getHistorico() {
+        return historicoCalc;
     }
 }
