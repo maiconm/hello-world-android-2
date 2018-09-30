@@ -33,7 +33,7 @@ public class Pratica2Activity extends AppCompatActivity implements View.OnClickL
         }
 
         if (i == R.id.btExercicio2P2) {
-
+            startActivity(new Intent(this, Exercicio2P2Activity.class));
         }
 
         if (i == R.id.btExercicio2P2) {

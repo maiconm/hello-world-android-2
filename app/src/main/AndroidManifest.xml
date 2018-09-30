@@ -72,6 +72,14 @@
         <activity
             android:name=".lista2.Exercicio1P2Tela2Activity"
             android:label="@string/title_activity_exercicio1_p2_tela2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio2P2Activity"
+            android:label="@string/title_activity_exercicio2_p2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio2P2Tela2Activity"
+            android:label="@string/title_activity_exercicio2_p2_tela2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
