@@ -14,4 +14,11 @@
         <item>3 anos de experiencia</item>
         <item>6 anos de experiencia</item>
     </string-array>
+    <string name="title_activity_exercicio4_p1">Exercicio 4 - Pratica 1</string>
+    <string-array name="profissao_p1_exercicio4">
+        <item>Aluno</item>
+        <item>Professor</item>
+        <item>Coordenador</item>
+        <item>Analista</item>
+    </string-array>
 </resources>
