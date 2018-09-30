@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".lista1.Exercicio2P1Activity">
+    tools:context=".lista1.Exercicio5P1Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nome"
-            android:id="@+id/etPratica1Exe2Nome"/>
+            android:id="@+id/etPratica1Exe5Nome"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,27 +23,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Endereco"
-            android:id="@+id/etPratica1Exe2Endereco"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:hint="Telefone"
-            android:id="@+id/etPratica1Exe2Telefone"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Imprimir"
-            android:id="@+id/btPratica1Exe2Imprimir"/>
+            android:hint="RU"
+            android:inputType="number"
+            android:id="@+id/etPratica1Exe5Ru"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,8 +33,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2px"
-            android:id="@+id/tvPratica1Exe2Result"/>
+            android:text="Profissao:"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvPratica1Exe5ListaProfissao" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostrar"
+            android:id="@+id/btPratica1Exe5Mostrar"/>
     </LinearLayout>
 
 </LinearLayout>
