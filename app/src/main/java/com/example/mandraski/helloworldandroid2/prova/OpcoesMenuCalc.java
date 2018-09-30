@@ -1,10 +1,12 @@
-package com.example.mandraski.helloworldandroid2;
+package com.example.mandraski.helloworldandroid2.prova;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.example.mandraski.helloworldandroid2.R;
 
 public class OpcoesMenuCalc extends AppCompatActivity {
 
@@ -29,6 +31,13 @@ public class OpcoesMenuCalc extends AppCompatActivity {
             case R.id.abHistorico:
                 if (!this.equals(HistoricoActivity.class)) {
                     startActivity(new Intent(this, HistoricoActivity.class));
+                    return true;
+                }
+                return true;
+
+            case R.id.abAluno:
+                if (!this.equals(AlunoActivity.class)) {
+                    startActivity(new Intent(this, AlunoActivity.class));
                     return true;
                 }
                 return true;

@@ -1,11 +1,14 @@
-package com.example.mandraski.helloworldandroid2;
+package com.example.mandraski.helloworldandroid2.prova;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.mandraski.helloworldandroid2.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +34,7 @@ public class HistoricoActivity extends OpcoesMenuCalc {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ProvaActivity.setResultReturn(lista.get(position));
+                startActivity(new Intent(HistoricoActivity.this, ProvaActivity.class));
                 finish();
             }
         });

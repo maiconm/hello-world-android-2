@@ -10,24 +10,29 @@
     tools:showIn="@layout/activity_lista">
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:layout_width="match_parent"
+            android:drawableBottom="@drawable/lista_icon"
+            android:id="@+id/btLista1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Lista 1"/>
+
+        <Button
+            android:drawableBottom="@drawable/lista_icon"
+            android:id="@+id/btLista2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Lista 2"/>
+
+        <Button
+            android:drawableBottom="@drawable/ic_error_outline_black_24dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:id="@+id/btProva"
-            android:text="Prova"/>
+            android:text="Prova - 1"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sair"
-            android:id="@+id/btnLogout"/>
-    </LinearLayout>
-
 
 </LinearLayout>

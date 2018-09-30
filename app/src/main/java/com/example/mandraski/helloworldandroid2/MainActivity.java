@@ -63,12 +63,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         }
     }
 
-    // metodo de login:
-    private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -80,6 +74,12 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
+    }
+
+    // metodo de login:
+    private void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {

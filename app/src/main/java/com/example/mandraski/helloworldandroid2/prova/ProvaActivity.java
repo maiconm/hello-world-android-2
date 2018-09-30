@@ -1,4 +1,4 @@
-package com.example.mandraski.helloworldandroid2;
+package com.example.mandraski.helloworldandroid2.prova;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -7,6 +7,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.mandraski.helloworldandroid2.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -210,12 +212,14 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             rbDecToggle();
             if (!displayString.equals("")) {
                 n1 = Double.parseDouble(displayString);
-                if (n1 < 0) {
-                    displayString = displayString.substring(1);
-                } else {
-                    displayString = "-" + displayString;
+                if (n1 != 0) {
+                    if (n1 < 0) {
+                        displayString = displayString.substring(1);
+                    } else {
+                        displayString = "-" + displayString;
+                    }
+                    display.setText(displayString);
                 }
-                display.setText(displayString);
             }
         }
 
@@ -330,6 +334,14 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
         }
     }
 
+    public static ArrayList<String> getHistorico() {
+        return (ArrayList<String>) historicoCalc;
+    }
+
+    public static void setResultReturn(String resultado) {
+        resultReturn = resultado;
+    }
+
     private void rbDecToggle() {
         int radioButton = rgConversaoNumerica.getCheckedRadioButtonId();
         if (radioButton != R.id.rbDec) {
@@ -345,16 +357,9 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
         Toast.makeText(this, conta, Toast.LENGTH_SHORT).show();
     }
 
-    public static ArrayList<String> getHistorico() {
-        return (ArrayList<String>) historicoCalc;
-    }
-
     private int stringToInt(String numero) {
         double numDouble = Double.parseDouble(numero);
         return (int) numDouble;
     }
 
-    public static void setResultReturn(String resultado) {
-        resultReturn = resultado;
-    }
 }
