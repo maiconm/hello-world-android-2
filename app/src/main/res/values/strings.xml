@@ -5,6 +5,13 @@
     <string name="title_activity_historico">Historico</string>
     <string name="title_activity_aluno">Aluno</string>
     <string name="title_activity_pratica1">Lista - Pratica 1</string>
-    <string name="title_activity_exercicio1_p1">Exercicio1 - Pratica 1</string>
+    <string name="title_activity_exercicio1_p1">Exercicio 1 - Pratica 1</string>
     <string name="title_activity_exercicio2_p1">Exercicio 2 - Pratica 1</string>
+    <string name="title_activity_exercicio3_p1">Exercicio 3 - Pratica 1</string>
+    <string-array name="experiencia_p1_exercicio3">
+        <item>sem experiencia</item>
+        <item>1 ano de experiencia</item>
+        <item>3 anos de experiencia</item>
+        <item>6 anos de experiencia</item>
+    </string-array>
 </resources>
