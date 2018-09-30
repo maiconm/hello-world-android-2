@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".prova.ProvaActivity">
+
+    <!-- input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/background_dark"
+            android:gravity="right"
+            android:textColor="@android:color/white"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <!-- (hex)(octal)(bin)(dec) -->
+    <RadioGroup
+        android:id="@+id/rgConversaoNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbHex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hex" />
+
+        <RadioButton
+            android:id="@+id/rbOctal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Octal" />
+
+        <RadioButton
+            android:id="@+id/rbBin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bin" />
+
+        <RadioButton
+            android:id="@+id/rbDec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Dec" />
+    </RadioGroup>
+
+    <!-- [+][-][x][/] -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btSoma"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btSubtracao"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btMultiplicacao"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="X" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btDivisao"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="/" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- [1][2][3][-+] -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumUm"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumDois"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumTres"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btInverte"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="+/-" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- [4][5][6][=] -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumQuatro"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumCinco"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumSeis"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btIgual"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="=" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- [7][8][9][.] -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumSete"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumOito"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumNove"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btPonto"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="." />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- [raiz][0][exp][c] -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btRaiz"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="raiz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btNumZero"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btExp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="exp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btClear"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="c" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

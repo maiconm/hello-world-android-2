@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">HelloWorld Android 2</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_lista">ListaActivity</string>
+    <string name="title_activity_lista">Lista</string>
+    <string name="title_activity_prova">Calculadora</string>
+    <string name="title_activity_historico">Historico</string>
+    <string name="title_activity_aluno">Aluno</string>
 </resources>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_view_comfy_black_24dp"
+        android:id="@+id/abCalc"
+        android:orderInCategory="100"
+        android:title="calc"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_history_black_24dp"
+        android:id="@+id/abHistorico"
+        android:orderInCategory="100"
+        android:title="historico"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_person_black_24dp"
+        android:id="@+id/abAluno"
+        android:orderInCategory="100"
+        android:title="aluno"
+        app:showAsAction="always" />
+</menu>

@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity">
+    tools:context=".prova.HistoricoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.google.android.gms.common.SignInButton
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnGoogle"></com.google.android.gms.common.SignInButton>
+            android:text="Historico"
+            android:textSize="33sp" />
     </LinearLayout>
-    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/lvHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 </LinearLayout>

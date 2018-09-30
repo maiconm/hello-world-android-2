@@ -22,6 +22,20 @@
         <activity
             android:name=".ListaActivity"
             android:label="@string/title_activity_lista"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova.ProvaActivity"
+            android:label="@string/title_activity_prova"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova.HistoricoActivity"
+            android:label="@string/title_activity_historico"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova.AlunoActivity"
+            android:label="@string/title_activity_aluno"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
