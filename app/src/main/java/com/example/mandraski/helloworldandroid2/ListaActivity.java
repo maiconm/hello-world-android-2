@@ -2,11 +2,11 @@ package com.example.mandraski.helloworldandroid2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.mandraski.helloworldandroid2.lista1.Pratica1Activity;
+import com.example.mandraski.helloworldandroid2.lista2.Pratica2Activity;
 import com.example.mandraski.helloworldandroid2.prova.ProvaActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -22,7 +22,7 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // pega instancias de autenticacao do firebase:
@@ -40,6 +40,7 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
         // listener do botao do xml, para verificar quando o usuario clica:
         findViewById(R.id.btProva).setOnClickListener(this);
         findViewById(R.id.btLista1).setOnClickListener(this);
+        findViewById(R.id.btLista2).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +49,10 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
 
         if (i == R.id.btLista1) {
             startActivity(new Intent(this, Pratica1Activity.class));
+        }
+
+        if (i == R.id.btLista2) {
+            startActivity(new Intent(this, Pratica2Activity.class));
         }
 
         if (i == R.id.btProva) {

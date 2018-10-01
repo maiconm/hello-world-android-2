@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mandraski.helloworldandroid2">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,7 +61,35 @@
         <activity
             android:name=".lista1.Exercicio5P1Activity"
             android:label="@string/title_activity_exercicio5_p1"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Pratica2Activity"
+            android:label="@string/title_activity_pratica2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio1P2Activity"
+            android:label="@string/title_activity_exercicio1_p2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio1P2Tela2Activity"
+            android:label="@string/title_activity_exercicio1_p2_tela2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio2P2Activity"
+            android:label="@string/title_activity_exercicio2_p2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio2P2Tela2Activity"
+            android:label="@string/title_activity_exercicio2_p2_tela2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio3P2Activity"
+            android:label="@string/title_activity_exercicio3_p2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista2.Exercicio3P2Tela2Activity"
+            android:label="@string/title_activity_exercicio3_p2_tela2"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
