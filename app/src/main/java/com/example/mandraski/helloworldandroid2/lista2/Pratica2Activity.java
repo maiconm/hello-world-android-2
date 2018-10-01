@@ -36,8 +36,8 @@ public class Pratica2Activity extends AppCompatActivity implements View.OnClickL
             startActivity(new Intent(this, Exercicio2P2Activity.class));
         }
 
-        if (i == R.id.btExercicio2P2) {
-
+        if (i == R.id.btExercicio3P2) {
+            startActivity(new Intent(this, Exercicio3P2Activity.class));
         }
     }
 }

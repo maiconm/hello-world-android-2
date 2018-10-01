@@ -27,4 +27,6 @@
     <string name="title_activity_exercicio1_p2_tela2">Exercicio 1 - Pratica 2 - Tela 2</string>
     <string name="title_activity_exercicio2_p2">Exercicio 2 - Pratica 2</string>
     <string name="title_activity_exercicio2_p2_tela2">Exercicio 2 - Pratica 2 - Tela 2</string>
+    <string name="title_activity_exercicio3_p2">Exercicio 3 - Pratica 2</string>
+    <string name="title_activity_exercicio3_p2_tela2">Exercicio3P2Tela2Activity</string>
 </resources>
