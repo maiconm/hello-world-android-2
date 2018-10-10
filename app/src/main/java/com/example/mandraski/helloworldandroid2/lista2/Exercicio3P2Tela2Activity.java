@@ -44,31 +44,15 @@ public class Exercicio3P2Tela2Activity extends AppCompatActivity {
         nomesList.setAdapter(ad);
 
         nomesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @SuppressLint("MissingPermission")
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 numero = Exercicio3P2Activity.telefones.get(position);
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + numero));
+                startActivity(i);
             }
         });
 
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_CALL_PHONE: {
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Intent i = new Intent(Intent.ACTION_CALL);
-                    i.setData(Uri.parse("tel:" + numero));
-                    if (ActivityCompat.checkSelfPermission(Exercicio3P2Tela2Activity.this, android.Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                        startActivity(i);
-                    } else {
-                        Toast.makeText(Exercicio3P2Tela2Activity.this, "Manifest - Permissao negada!", Toast.LENGTH_SHORT).show();
-                    }
-                    startActivity(i);
-                }
-            }
-        }
-    }
 }

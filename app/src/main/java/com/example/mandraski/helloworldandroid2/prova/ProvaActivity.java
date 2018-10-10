@@ -23,6 +23,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
     private String operacao = "";
     private String conversao = "decimal";
     private double n1;
+    private String auxDisplay = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
         super.onResume();
         if (!resultReturn.equals("")) {
             String[] result = resultReturn.split("= ");
+            displayString = result[1];
             display.setText(result[1]);
             Toast.makeText(this, resultReturn, Toast.LENGTH_SHORT).show();
         }
@@ -202,7 +204,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                 n1 = Double.parseDouble(displayString);
                 displayString = String.valueOf(Math.sqrt(n1));
                 display.setText(displayString);
-                String resultado = n1 + " raiz = " + displayString;
+                String resultado = " √ " + n1 + " = " + displayString;
                 historicoCalc.add(resultado);
                 Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
             }
@@ -216,7 +218,8 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                     if (n1 < 0) {
                         displayString = displayString.substring(1);
                     } else {
-                        displayString = "-" + displayString;
+                        String auxString = displayString;
+                        displayString = "-" + auxString;
                     }
                     display.setText(displayString);
                 }
@@ -227,7 +230,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             rbDecToggle();
             if (!displayString.equals("")) {
                 n1 = Double.parseDouble(displayString);
-                operacao = "exp";
+                operacao = "^";
                 displayString = "";
                 display.setText(displayString);
             }
@@ -239,7 +242,8 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                 switch (operacao) {
 
                     case "+":
-                        double n2 = Double.parseDouble(0 + displayString);
+                        double n2 = 0;
+                        n2 = Double.parseDouble(0 + displayString);
                         displayString = String.valueOf(n1 + n2);
                         display.setText(displayString);
                         addHistorico(n1, operacao, n2, displayString);
@@ -247,7 +251,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                         break;
 
                     case "-":
-                        n2 = Double.parseDouble(0 + displayString);
+                        n2 = Double.parseDouble(displayString);
                         displayString = String.valueOf(n1 - n2);
                         display.setText(displayString);
                         addHistorico(n1, operacao, n2, displayString);
@@ -255,7 +259,7 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                         break;
 
                     case "x":
-                        n2 = Double.parseDouble(0 + displayString);
+                        n2 = Double.parseDouble(displayString);
                         displayString = String.valueOf(n1 * n2);
                         display.setText(displayString);
                         addHistorico(n1, operacao, n2, displayString);
@@ -263,15 +267,15 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
                         break;
 
                     case "/":
-                        n2 = Double.parseDouble(0 + displayString);
+                        n2 = Double.parseDouble(displayString);
                         displayString = String.valueOf(n1 / n2);
                         display.setText(displayString);
                         addHistorico(n1, operacao, n2, displayString);
                         operacao = "";
                         break;
 
-                    case "exp":
-                        n2 = Double.parseDouble(0 + displayString);
+                    case "^":
+                        n2 = Double.parseDouble(displayString);
                         displayString = String.valueOf(Math.pow(n1, n2));
                         display.setText(displayString);
                         addHistorico(n1, operacao, n2, displayString);
@@ -285,9 +289,8 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
         switch (rgConversaoNumerica.getCheckedRadioButtonId()) {
 
             case R.id.rbDec:
-                if (!displayString.equals("")) {
+                if (!auxDisplay.equals("")) {
                     if (!conversao.equals("decimal")) {
-                        displayString = String.valueOf(Integer.parseInt(displayString, 16));
                         display.setText(displayString);
                         conversao = "decimal";
                         break;
@@ -299,8 +302,9 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             case R.id.rbBin:
                 if (!displayString.equals("")) {
                     if (!conversao.equals("bin")) {
-                        displayString = String.valueOf(Integer.toBinaryString(stringToInt(displayString)));
-                        display.setText(displayString);
+                        auxDisplay = displayString;
+                        auxDisplay = String.valueOf(Integer.toBinaryString(stringToInt(auxDisplay)));
+                        display.setText(auxDisplay);
                         conversao = "bin";
                         break;
                     }
@@ -311,8 +315,9 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             case R.id.rbOctal:
                 if (!displayString.equals("")) {
                     if (!conversao.equals("octal")) {
-                        displayString = String.valueOf(Integer.toOctalString(stringToInt(displayString)));
-                        display.setText(displayString);
+                        auxDisplay = displayString;
+                        auxDisplay = String.valueOf(Integer.toOctalString(stringToInt(auxDisplay)));
+                        display.setText(auxDisplay);
                         conversao = "octal";
                         break;
                     }
@@ -323,8 +328,9 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             case R.id.rbHex:
                 if (!displayString.equals("")) {
                     if (!conversao.equals("hex")) {
-                        displayString = String.valueOf(Integer.toHexString(stringToInt(displayString)));
-                        display.setText(displayString);
+                        auxDisplay = displayString;
+                        auxDisplay = String.valueOf(Integer.toHexString(stringToInt(auxDisplay)));
+                        display.setText(auxDisplay);
                         conversao = "hex";
                         break;
                     }
@@ -348,6 +354,8 @@ public class ProvaActivity extends OpcoesMenuCalc implements View.OnClickListene
             dec.toggle();
             displayString = "";
             display.setText(displayString);
+        } else {
+            auxDisplay = displayString;
         }
     }
 
