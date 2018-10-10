@@ -18,14 +18,14 @@
             android:id="@+id/btLista1"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Lista 1"/>
+            android:text="Lista - 1"/>
 
         <Button
             android:drawableBottom="@drawable/lista_icon"
             android:id="@+id/btLista2"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Lista 2"/>
+            android:text="Lista - 2"/>
 
         <Button
             android:drawableBottom="@drawable/ic_error_outline_black_24dp"

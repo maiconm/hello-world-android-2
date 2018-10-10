@@ -37,6 +37,7 @@
         <activity
             android:name=".prova.AlunoActivity"
             android:label="@string/title_activity_aluno"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".lista1.Pratica1Activity"
