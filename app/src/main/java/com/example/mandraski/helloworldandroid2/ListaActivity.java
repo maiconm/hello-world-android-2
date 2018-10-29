@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.mandraski.helloworldandroid2.lista1.Pratica1Activity;
 import com.example.mandraski.helloworldandroid2.lista2.Pratica2Activity;
+import com.example.mandraski.helloworldandroid2.lista3.Pratica3Activity;
 import com.example.mandraski.helloworldandroid2.prova.ProvaActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -41,6 +42,7 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
         findViewById(R.id.btProva).setOnClickListener(this);
         findViewById(R.id.btLista1).setOnClickListener(this);
         findViewById(R.id.btLista2).setOnClickListener(this);
+        findViewById(R.id.btLista3).setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +59,10 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
 
         if (i == R.id.btProva) {
             startActivity(new Intent(this, ProvaActivity.class));
+        }
+
+        if (i == R.id.btLista3) {
+            startActivity(new Intent(this, Pratica3Activity.class));
         }
     }
 
