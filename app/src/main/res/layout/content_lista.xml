@@ -43,6 +43,13 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Lista - 3"/>
+
+        <Button
+            android:drawableBottom="@drawable/ic_error_outline_black_24dp"
+            android:id="@+id/btProva2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Prova - 2"/>
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +57,7 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/exercicio1"
-            android:text="Exercio 1"
+            android:text="Exercio SQL"
             android:layout_width="120dp"
             android:layout_height="wrap_content" />
     </LinearLayout>

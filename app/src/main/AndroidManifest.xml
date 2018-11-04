@@ -117,7 +117,16 @@
         <activity
             android:name=".lista3.Exercicio2P3Tela2Activity"
             android:label="@string/title_activity_exercicio2_p3_tela2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova2.GeniusActivity"
+            android:label="@string/title_activity_genius"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova2.GeniusAlunoActivity"
+            android:label="@string/title_activity_genius_aluno"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
