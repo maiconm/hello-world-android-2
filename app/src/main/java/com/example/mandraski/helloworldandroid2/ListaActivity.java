@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.mandraski.helloworldandroid2.exercicio.sqlActivity;
 import com.example.mandraski.helloworldandroid2.lista1.Pratica1Activity;
 import com.example.mandraski.helloworldandroid2.lista2.Pratica2Activity;
 import com.example.mandraski.helloworldandroid2.lista3.Pratica3Activity;
@@ -43,6 +44,7 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
         findViewById(R.id.btLista1).setOnClickListener(this);
         findViewById(R.id.btLista2).setOnClickListener(this);
         findViewById(R.id.btLista3).setOnClickListener(this);
+        findViewById(R.id.exercicio1).setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +65,10 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
 
         if (i == R.id.btLista3) {
             startActivity(new Intent(this, Pratica3Activity.class));
+        }
+
+        if (i == R.id.exercicio1) {
+            startActivity(new Intent(this, sqlActivity.class));
         }
     }
 

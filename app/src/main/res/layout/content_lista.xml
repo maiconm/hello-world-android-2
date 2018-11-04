@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ListaActivity"
-    tools:showIn="@layout/activity_lista">
+    tools:context=".ListaActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -44,6 +43,16 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Lista - 3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/exercicio1"
+            android:text="Exercio 1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </LinearLayout>

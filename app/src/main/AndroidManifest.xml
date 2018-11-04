@@ -97,6 +97,10 @@
             android:label="@string/title_activity_pratica3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".exercicio.sqlActivity"
+            android:label="@string/title_activity_sql"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".lista3.Exercicio1P3Activity"
             android:label="@string/title_activity_exercicio1_p3"
             android:launchMode="singleTask"
