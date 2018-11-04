@@ -5,12 +5,13 @@ public class Pessoa {
     private String nome;
     private String idade;
     private String cpf;
+    private String profissao;
 
-    public Pessoa (long id, String nome, String idade, String cpf) {
+    public Pessoa (long id, String nome, String idade, String profissao) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
-        this.cpf = cpf;
+        this.profissao = profissao;
     }
 
     public Pessoa (String nome, String idade, String cpf) {
@@ -50,5 +51,9 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String getProfissao() { return this.profissao; }
+
+    public void setProfissao(String profissao) { this.profissao = profissao; }
 
 }

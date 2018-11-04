@@ -39,14 +39,14 @@ public class Exercicio1P3Activity extends Navbar implements View.OnClickListener
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.btPratica3Exe1cadastrar) {
-            if (!temCaposVazio()) {
+            if (!temCamposVazio()) {
                 addPessoa();
                 startActivity(new Intent(this, Exercicio1P3Tela2Activity.class));
             }
         }
     }
 
-    private boolean temCaposVazio() {
+    private boolean temCamposVazio() {
         String campos = "";
         if (nome.getText().toString().isEmpty()) {
             campos += "nome";

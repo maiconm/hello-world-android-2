@@ -32,7 +32,10 @@ public class Exercicio1P3Tela2Activity extends Navbar {
         lvListaPessoas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), lista.get(position).getNome(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "nome: " + lista.get(position).getNome() + " idade: " +
+                        lista.get(position).getIdade() + " cpf: " +
+                        lista.get(position).getCpf(), Toast.LENGTH_SHORT
+                ).show();
             }
         });
     }
