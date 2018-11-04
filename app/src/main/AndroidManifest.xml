@@ -99,6 +99,24 @@
         <activity
             android:name=".exercicio.sqlActivity"
             android:label="@string/title_activity_sql"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista3.Exercicio1P3Activity"
+            android:label="@string/title_activity_exercicio1_p3"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista3.Exercicio1P3Tela2Activity"
+            android:label="@string/title_activity_exercicio1_p3_tela2"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista3.Exercicio2P3Activity"
+            android:label="@string/title_activity_exercicio2_p3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista3.Exercicio2P3Tela2Activity"
+            android:label="@string/title_activity_exercicio2_p3_tela2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
