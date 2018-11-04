@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_person_black_24dp"
+        android:id="@+id/addPessoa"
+        android:orderInCategory="100"
+        android:title="addPessoa"
+        app:showAsAction="always" />
+</menu>
