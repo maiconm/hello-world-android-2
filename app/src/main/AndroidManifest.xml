@@ -103,9 +103,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".lista3.Exercicio1P3Tela2Activity"
-            android:launchMode="singleTask"
             android:label="@string/title_activity_exercicio1_p3_tela2"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista3.Exercicio2P3Activity"
+            android:label="@string/title_activity_exercicio2_p3"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

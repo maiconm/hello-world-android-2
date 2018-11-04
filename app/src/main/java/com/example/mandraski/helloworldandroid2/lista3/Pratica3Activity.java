@@ -20,6 +20,7 @@ public class Pratica3Activity extends AppCompatActivity implements View.OnClickL
         setSupportActionBar(toolbar);
 
         findViewById(R.id.btExercicio1P3).setOnClickListener(this);
+        findViewById(R.id.btExercicio2P3).setOnClickListener(this);
 
     }
 
@@ -28,6 +29,9 @@ public class Pratica3Activity extends AppCompatActivity implements View.OnClickL
         int i = v.getId();
         if (i == R.id.btExercicio1P3) {
             startActivity(new Intent(this, Exercicio1P3Activity.class));
+        }
+        if (i == R.id.btExercicio2P3) {
+            startActivity(new Intent(this, Exercicio2P3Activity.class));
         }
     }
 }
