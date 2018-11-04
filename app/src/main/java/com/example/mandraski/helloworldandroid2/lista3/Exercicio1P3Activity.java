@@ -1,8 +1,8 @@
 package com.example.mandraski.helloworldandroid2.lista3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +13,7 @@ import com.example.mandraski.helloworldandroid2.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Exercicio1P3Activity extends AppCompatActivity implements View.OnClickListener {
+public class Exercicio1P3Activity extends Navbar implements View.OnClickListener {
     public static List<Pessoa> pessoas = new ArrayList<>();
 
     private EditText nome, idade, cpf;
@@ -41,6 +41,7 @@ public class Exercicio1P3Activity extends AppCompatActivity implements View.OnCl
         if (i == R.id.btPratica3Exe1cadastrar) {
             if (!temCaposVazio()) {
                 addPessoa();
+                startActivity(new Intent(this, Exercicio1P3Tela2Activity.class));
             }
         }
     }
@@ -71,4 +72,6 @@ public class Exercicio1P3Activity extends AppCompatActivity implements View.OnCl
         pessoas.add(pessoa);
         Toast.makeText(this, pessoa.getNome() + " foi adicionada!", Toast.LENGTH_SHORT).show();
     }
+
+    public static ArrayList<Pessoa> getPessoas() {return (ArrayList<Pessoa>) pessoas;}
 }
