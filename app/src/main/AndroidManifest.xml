@@ -127,6 +127,10 @@
             android:label="@string/title_activity_genius_aluno"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova2.JogoActivity"
+            android:label="@string/title_activity_jogo"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

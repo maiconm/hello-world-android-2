@@ -31,8 +31,8 @@ public class GeniusActivity extends ActionBarGenius implements View.OnClickListe
             startActivity(new Intent(this, GeniusAlunoActivity.class));
         }
 
-        if (i == R.id.btSobre) {
-
+        if (i == R.id.btJogar) {
+            startActivity(new Intent(this, JogoActivity.class));
         }
 
         if (i == R.id.btRank) {
