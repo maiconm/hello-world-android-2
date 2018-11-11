@@ -119,22 +119,68 @@
             android:label="@string/title_activity_exercicio2_p3_tela2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prova2.GeniusActivity"
+            android:name=".lista4.LightsaberActivity"
+            android:label="@string/title_activity_lightsaber"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".prova_02.Genius"
             android:label="@string/title_activity_genius"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".prova2.GeniusAlunoActivity"
-            android:label="@string/title_activity_genius_aluno"
             android:launchMode="singleTask"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mandraski.helloworldandroid2.prova_02.Inicio" />
+        </activity>
         <activity
+<<<<<<< Updated upstream
             android:name=".prova2.JogoActivity"
             android:label="@string/title_activity_jogo"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< Updated upstream
         <activity
             android:name=".lista4.LightsaberActivity"
             android:label="@string/title_activity_lightsaber"
             android:theme="@style/AppTheme.NoActionBar" />
+=======
+=======
+            android:name=".prova_02.Ranking"
+            android:label="@string/title_activity_genius"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mandraski.helloworldandroid2.prova_02.Inicio" />
+        </activity>
+        <activity
+            android:name=".prova_02.Sobre"
+            android:label="@string/title_activity_genius"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mandraski.helloworldandroid2.prova_02.Inicio" />
+        </activity>
+        <activity
+            android:name=".prova_02.SalvarRanking"
+            android:label="@string/title_activity_genius"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".prova_02.MenuInicialActivity"
+            android:label="@string/title_activity_menu_inicial"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mandraski.helloworldandroid2.prova_02.Inicio" />
+        </activity>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

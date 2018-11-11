@@ -38,5 +38,15 @@
     <string name="title_activity_genius">Genius</string>
     <string name="title_activity_genius_aluno">Aluno</string>
     <string name="title_activity_jogo">Genius</string>
+<<<<<<< Updated upstream
     <string name="title_activity_lightsaber">Sabre de luz</string>
+=======
+<<<<<<< Updated upstream
+=======
+    <string name="title_activity_lightsaber">Sabre de luz</string>
+    <string name="title_activity_inicio">Inicio</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="title_activity_menu_inicial">Menu Inicial</string>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 </resources>

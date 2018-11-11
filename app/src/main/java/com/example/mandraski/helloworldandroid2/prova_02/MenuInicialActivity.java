@@ -1,4 +1,4 @@
-package com.example.mandraski.helloworldandroid2.prova2;
+package com.example.mandraski.helloworldandroid2.prova_02;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,12 +10,12 @@ import android.view.View;
 
 import com.example.mandraski.helloworldandroid2.R;
 
-public class GeniusActivity extends ActionBarGenius implements View.OnClickListener{
+public class MenuInicialActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_genius);
+        setContentView(R.layout.activity_menu_inicial);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -28,15 +28,16 @@ public class GeniusActivity extends ActionBarGenius implements View.OnClickListe
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.btSobre) {
-            startActivity(new Intent(this, GeniusAlunoActivity.class));
+            startActivity(new Intent(this, Sobre.class));
         }
 
         if (i == R.id.btJogar) {
-            startActivity(new Intent(this, JogoActivity.class));
+            startActivity(new Intent(this, Genius.class));
         }
 
         if (i == R.id.btRank) {
-
+            startActivity(new Intent(this, Ranking.class));
         }
     }
+
 }

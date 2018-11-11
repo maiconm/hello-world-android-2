@@ -11,7 +11,8 @@ import com.example.mandraski.helloworldandroid2.lista2.Pratica2Activity;
 import com.example.mandraski.helloworldandroid2.lista3.Pratica3Activity;
 import com.example.mandraski.helloworldandroid2.lista4.LightsaberActivity;
 import com.example.mandraski.helloworldandroid2.prova.ProvaActivity;
-import com.example.mandraski.helloworldandroid2.prova2.GeniusActivity;
+import com.example.mandraski.helloworldandroid2.prova_02.Genius;
+import com.example.mandraski.helloworldandroid2.prova_02.MenuInicialActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -76,7 +77,7 @@ public class ListaActivity extends ActionBarMain implements View.OnClickListener
         }
 
         if (i == R.id.btProva2) {
-            startActivity(new Intent(this, GeniusActivity.class));
+            startActivity(new Intent(this, MenuInicialActivity.class));
         }
 
         if (i == R.id.btLista4) {
