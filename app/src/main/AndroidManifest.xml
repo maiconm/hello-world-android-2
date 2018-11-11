@@ -131,6 +131,10 @@
             android:name=".prova2.JogoActivity"
             android:label="@string/title_activity_jogo"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lista4.LightsaberActivity"
+            android:label="@string/title_activity_lightsaber"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

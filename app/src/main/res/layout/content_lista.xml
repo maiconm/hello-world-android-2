@@ -45,6 +45,13 @@
             android:text="Lista - 3"/>
 
         <Button
+            android:drawableBottom="@drawable/lista_icon"
+            android:id="@+id/btLista4"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Lista - 4"/>
+
+        <Button
             android:drawableBottom="@drawable/ic_error_outline_black_24dp"
             android:id="@+id/btProva2"
             android:layout_width="120dp"
